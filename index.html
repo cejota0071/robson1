@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBSON CALHAS E RUFOS | Instalação e Manutenção de Calhas e Rufos</title>
+    <meta name="description" content="Especialistas em instalação, manutenção e reparos de calhas e rufos. Força e proteção para seu lar com materiais de primeira linha. Orçamento rápido via WhatsApp.">
+    <meta name="keywords" content="calhas, rufos, instalação, manutenção, reparos, drenagem, proteção, Robson Calhas e Rufos">
+    <meta name="author" content="Robson Calhas e Rufos">
+
+    <!-- Open Graph para compartilhamento -->
+    <meta property="og:title" content="ROBSON CALHAS E RUFOS | Força e Proteção">
+    <meta property="og:description" content="Especialistas em calhas e rufos. Instalação, manutenção e reparos com qualidade e segurança.">
+    <meta property="og:image" content="/img/logo.png">
+    <meta property="og:url" content="https://robsoncalhaseufos.com">
+    <meta property="og:type" content="website">
+
+    <!-- Dados Estruturados Schema.org para Empresa Local -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ROBSON CALHAS E RUFOS",
+        "description": "Especialistas em instalação, manutenção e reparos de calhas e rufos.",
+        "url": "https://robsoncalhaseufos.com",
+        "telephone": "+55-34-99772-7351",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BR"
+        },
+        "serviceType": ["Instalação de Calhas", "Manutenção de Rufos", "Reparos"],
+        "areaServed": "Brasil"
+    }
+    </script>
+
+    <!-- Google Fonts: Bebas Neue (títulos) e Roboto (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- NAVEGAÇÃO -->
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo"> <img src="/img/logo.png" alt="logo da empresa" height="50px" > </div>
+            <ul>
+                <li><a href="#hero" class="nav-link active">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- SEÇÃO PRINCIPAL (HERO) -->
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>ROBSON<br> CALHAS E RUFOS</h1>
+                <p>Força e Proteção para o seu Lar.</p>
+                <a href="#contato" class="btn">ORÇAMENTO RÁPIDO</a>
+            </div>
+        </section>
+
+        <!-- SEÇÃO SOBRE NÓS -->
+        <section id="sobre" class="container">
+            <div class="sobre-content">
+                <img src="/img/rob.png" alt="Foto de Robson, proprietário da Robson Calhas e Rufos, especialista em instalação e manutenção de calhas e rufos" loading="lazy">
+                <div>
+                    <h2>Quem Somos</h2>
+                    <p>Olá, sou Robson. Minha história é construída sobre a base da confiança e do trabalho bem feito. Na ROBSON CALHAS E RUFOS, cada projeto é um compromisso com a durabilidade e a segurança. Não instalamos apenas calhas; entregamos tranquilidade. Utilizamos o que há de melhor no mercado para garantir que sua casa ou empresa esteja sempre protegida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE SERVIÇOS -->
+        <section id="servicos" class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-item">
+                    <i class="fas fa-home"></i>
+                    <h3>Instalação</h3>
+                    <p>Projetos e instalação de calhas e rufos sob medida, com materiais de primeira linha para garantir máxima eficiência.</p>
+                </div>
+                <div class="servico-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Manutenção</h3>
+                    <p>Limpeza e manutenção preventiva para evitar entupimentos e garantir a vida útil do seu sistema de drenagem.</p>
+                </div>
+                <div class="servico-item">
+                    <i class="fas fa-hammer"></i>
+                    <h3>Reparos</h3>
+                    <p>Resolvemos infiltrações, trocamos trechos danificados e reformamos seu sistema de calhas e rufos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO WHATSAPP -->
+        <section id="contato">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <p>Preencha os campos e clique em enviar para conversar direto com nosso especialista sem compromisso no WhatsApp!</p>
+                <div class="whatsapp-form">
+                    <label for="whats-name" class="sr-only">Seu Nome</label>
+                    <input type="text" id="whats-name" placeholder="Seu Nome">
+                    <label for="whats-message" class="sr-only">Descreva o serviço que você precisa (ex: Instalação de calha em sobrado)</label>
+                    <textarea id="whats-message" placeholder="Descreva o serviço que você precisa (ex: Instalação de calha em sobrado)"></textarea>
+                    <button class="btn btn-whatsapp" onclick="sendToWhatsApp()">
+                        <i class="fab fa-whatsapp"></i> ENVIAR VIA WHATSAPP
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 CHAVES™. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- SCRIPT PARA NAVEGAÇÃO FIXA E LINK ATIVO ---
+        const header = document.getElementById('main-header');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // --- SCRIPT PARA ENVIAR MENSAGEM AO WHATSAPP ---
+        function sendToWhatsApp() {
+            const nome = document.getElementById('whats-name').value;
+            const mensagem = document.getElementById('whats-message').value;
+
+            if (!nome || !mensagem) {
+                alert('Por favor, preencha seu nome e a mensagem para continuar.');
+                return;
+            }
+
+            const numeroTelefone = '34997727351'; // Número para onde a mensagem será enviada
+            const textoFormatado = encodeURIComponent(`Olá, sou ${nome}. ${mensagem}`);
+            
+            const urlWhatsApp = `https://wa.me/${numeroTelefone}?text=${textoFormatado}`;
+            
+            // Abre o WhatsApp em uma nova aba
+            window.open(urlWhatsApp, '_blank');
+        }
+    </script>
+
+</body>
+</html>

@@ -141,6 +141,26 @@ section {
   box-shadow: 0 15px 35px rgba(0,0,0,.6);
 }
 
+.btn-service {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 5px;
+  font-family: var(--fonte-titulo);
+  font-size: 0.8rem;
+  text-decoration: none;
+  border-radius: 10px 5px 10px;
+  transition: all .3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.btn-service:hover {
+  transform: scale(1.05);
+  background: var(--vermelho-principal);
+  color: #fff;
+  border-radius: 5px 10px 5px;
+}
+
 /* ==================================================
    NAVEGAÇÃO
 ================================================== */
@@ -279,6 +299,7 @@ footer {
   padding: 30px;
   text-align: center;
   font-size: .9rem;
+  color: #777;
 }
 
 /* ==================================================

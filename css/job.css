@@ -1,0 +1,352 @@
+
+    /* ==================================================
+       VARIÁVEIS (Baseado no seu design.txt)
+    ================================================== */
+    :root {
+      --preto-fundo: #0a0a0a;
+      --preto-card: #1a1a1a;
+      --vermelho-principal: #e50914;
+      --vermelho-hover: #c40812;
+      --branco-texto: #f4f4f4;
+      --verde-whats: #25D366;
+
+      --fonte-titulo: 'Bebas Neue', cursive;
+      --fonte-corpo: 'Roboto', sans-serif;
+    }
+
+    /* ==================================================
+       RESET & BASE
+    ================================================== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--fonte-corpo);
+      background-color: var(--preto-fundo);
+      color: var(--branco-texto);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    h1, h2, h3 {
+      font-family: var(--fonte-titulo);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    h2 {
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--vermelho-principal);
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .container { max-width: 1200px; margin: auto; padding: 0 20px; }
+    section { padding: 100px 0; }
+
+    /* ==================================================
+       HEADER & NAVEGAÇÃO
+    ================================================== */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      padding: 20px 0;
+      transition: all .4s ease;
+      background: rgba(10,10,10,.9); /* Levemente escuro desde o início */
+      backdrop-filter: blur(10px);
+    }
+    header nav { display: flex; justify-content: space-between; align-items: center; }
+    header ul { display: flex; list-style: none; }
+    header ul li { margin-left: 30px; }
+    header ul li a {
+      color: var(--branco-texto);
+      text-decoration: none;
+      font-family: var(--fonte-titulo);
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    header ul li a:hover, header ul li a.active { color: var(--vermelho-principal); }
+
+    /* ==================================================
+       HERO SECTION (WORK PAGE)
+    ================================================== */
+    .hero-work {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+                  url('../img/capa_work_mobile.png') center/cover no-repeat fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 60px;
+    }
+    .hero-work h1 {
+      font-size: 4rem;
+      text-shadow: 0 5px 15px rgba(0,0,0,0.8);
+      animation: fadeInDown 1s ease;
+    }
+    .hero-work p {
+      font-size: 1.5rem;
+      margin-top: 15px;
+      color: #ddd;
+      animation: fadeInUp 1s ease 0.3s backwards;
+    }
+
+    /* ==================================================
+       FILTROS (Visual)
+    ================================================== */
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: transparent;
+      border: 2px solid var(--vermelho-principal);
+      color: var(--branco-texto);
+      padding: 10px 25px;
+      font-family: var(--fonte-titulo);
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      border-radius: 5px;
+    }
+    .filter-btn:hover, .filter-btn.active {
+      background: var(--vermelho-principal);
+      transform: translateY(-3px);
+    }
+
+    /* ==================================================
+       GRID DE TRABALHOS (GALERIA)
+    ================================================== */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 30px;
+    }
+    .work-card {
+      background: var(--preto-card);
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: all 0.4s ease;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+    }
+    .work-card:hover {
+      transform: translateY(-10px);
+      border-bottom-color: var(--vermelho-principal);
+      box-shadow: 0 15px 40px rgba(229, 9, 20, 0.2);
+    }
+    .work-img-wrapper {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+    }
+    .work-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .work-card:hover .work-img-wrapper img {
+      transform: scale(1.1);
+    }
+    .overlay-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: rgba(229, 9, 20, 0.9);
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+    .work-card:hover .overlay-icon {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    .work-info {
+      padding: 20px;
+    }
+    .work-info h3 {
+      font-size: 1.5rem;
+      color: var(--branco-texto);
+      margin-bottom: 5px;
+    }
+    .work-info p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+    .location-tag {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--vermelho-principal);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    /* ==================================================
+       SEÇÃO DE SEO / TEXTO
+    ================================================== */
+    .seo-text {
+      background: var(--preto-card);
+      text-align: center;
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 10px;
+      border-left: 5px solid var(--vermelho-principal);
+    }
+
+    /* ==================================================
+       CTA & FOOTER
+    ================================================== */
+    .cta-section {
+      background: linear-gradient(135deg, #111, #0a0a0a);
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .cta-section.red {
+      background: var(--vermelho-principal);
+    }
+    .btn {
+      display: inline-block;
+      padding: 18px 40px;
+      font-family: var(--fonte-titulo);
+      font-size: 1.4rem;
+      text-decoration: none;
+      border-radius: 10px 20px;
+      transition: all .3s ease;
+      cursor: pointer;
+      border: 2px solid transparent;
+      margin-top: 20px;
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, var(--verde-whats), #1db954);
+      color: #fff;
+      box-shadow: 0 10px 25px rgba(0,0,0,.4);
+    }
+    .btn-whatsapp:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 35px rgba(0,0,0,.6);
+    }
+
+    /* ==================================================
+   CONTATO
+================================================== */
+ #contato {
+  background: var(--vermelho-principal);
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  padding-top: 150px;
+  text-align: center;
+} 
+    .red h2::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: var(--preto-card);
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* ==================================================
+       LIGHTBOX (MODAL)
+    ================================================== */
+    .lightbox {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 2000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90vh;
+      border: 2px solid var(--vermelho-principal);
+      box-shadow: 0 0 50px rgba(229, 9, 20, 0.3);
+      border-radius: 5px;
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      color: #fff;
+      font-size: 3rem;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .lightbox-close:hover { color: var(--vermelho-principal); }
+    .lightbox-caption {
+      position: absolute;
+      bottom: 30px;
+      color: #fff;
+      font-family: var(--fonte-titulo);
+      font-size: 1.5rem;
+      background: rgba(0,0,0,0.7);
+      padding: 10px 20px;
+      border-radius: 50px;
+    }
+
+    /* Animações */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ==================================================
+       FOOTER
+    ================================================== */
+    footer {
+      background: #050505;
+      padding: 30px;
+      text-align: center;
+      font-size: .9rem;
+      color: #777;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      h2 { font-size: 2.5rem; }
+      .hero-work h1 { font-size: 2.5rem; }
+      header nav { flex-direction: column; gap: 15px; }
+      header ul { margin-top: 15px; flex-wrap: wrap; justify-content: center; }
+      header ul li { margin: 5px 15px; }
+    }

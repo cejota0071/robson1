@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sobre Robson Calhas | Instalação Profissional em Uberlândia</title>
+
+  <meta name="description" content="Conheça a história da Robson Calhas e Rufos. Anos de experiência dedicados à proteção de imóveis em Uberlândia com serviços de calhas e rufos.">
+  <meta name="author" content="Robson Calhas e Rufos">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sobre Nós - Robson Calhas e Rufos">
+  <meta property="og:description" content="Qualidade, honestidade e técnica em cada telhado atendido em Uberlândia.">
+  <meta property="og:image" content="/img/lg.png">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="icon" href="img/lg.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS INTEGRADO (BASEADO NO DESING.TXT) -->
+    <link rel="stylesheet" href="/css/sobre.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header id="main-header">
+  <nav class="container">
+    <div class="logo">
+      <a href="index.html">
+        <img src="/img/logo.png" alt="Robson Calhas e Rufos" height="50">
+      </a>
+    </div>
+    <ul>
+      <li><a href="index.html" class="nav-link">Início</a></li>
+      <li><a href="job.html" class="nav-link">Portfólio</a></li>
+      <li><a href="sobre.html" class="nav-link active">Sobre</a></li>
+      <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================= HERO / PARALLAX ================= -->
+<section id="inicio" class="parallax capa-desktop">
+  <div class="overlay">
+    <h1>Sobre Nós</h1>
+    <p>Transformamos telhados em proteção definitiva com instalação sob medida e acabamento impecável.</p>
+  </div>
+</section>
+
+<section class="parallax capa-mobile">
+  <div class="overlay">
+     <h1>Sobre Nós</h1>
+     <p>Soluções eficientes para sua casa ou empresa.</p>
+  </div>
+</section>
+
+<!-- ================= HISTÓRIA (USANDO CSS DO #SOBRE) ================= -->
+<section id="sobre">
+  <div class="container">
+    <h2>Quem Somos</h2>
+
+    <div class="sobre-content">
+      <img src="/img/cooperacao.png"
+           alt="Robson especialista em instalação de calhas e rufos"
+           loading="lazy">
+
+      <div>
+        <p>
+          Sou <strong>Robson</strong>, nascido e criado em Uberlândia, no coração do Triângulo Mineiro. Minha trajetória com calhas e telhados começou não como um negócio, mas como uma necessidade real de resolver um problema que afeta milhares de uberlandenses: as infiltrações causadas pelas chuvas fortes de verão.
+        </p>
+        <br>
+        <p>
+          Percebi cedo que o mercado oferecia muito material, mas faltava <strong>diagnóstico</strong>. Instalava-se calha padrão, sem analisar a inclinação do telhado ou a pressão da água naquele ponto específico. Comecei então a desenvolver um método próprio de medição e execução, focado na causa do vazamento, e não apenas na consequência.
+        </p>
+        <br>
+        <p>
+          Hoje, a <strong>Robson Calhas e Rufos</strong> é a extensão dessa busca incessante pela qualidade. Não usamos "gambiarras". Trabalhamos com cálculo de vazão, materiais compatíveis com o clima local e, acima de tudo, a certeza de que um serviço bem feito dispensa propagandas enganosas — ele fala por si mesmo.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VALORES (USANDO CSS DO .SERVICOS-GRID) ================= -->
+<section id="valores">
+  <div class="container">
+    <h2>Por que nos escolher?</h2>
+
+    <div class="servicos-grid">
+      <!-- Card de Valor 1 -->
+      <div class="servico-item">
+        <i class="fas fa-ruler-combined"></i>
+        <h3>Sob Medida</h3>
+        <p>Rejeitamos peças prontas que não encaixam. Cada calha é dimensionada no local para o seu telhado.</p>
+      </div>
+
+      <!-- Card de Valor 2 -->
+      <div class="servico-item">
+        <i class="fas fa-broom"></i>
+        <h3>Limpeza Total</h3>
+        <p>Respeitamos sua casa. O ambiente é deixado limpo e organizado após a instalação, sem pregos ou restos no chão.</p>
+      </div>
+
+      <!-- Card de Valor 3 -->
+      <div class="servico-item">
+        <i class="fas fa-shield-alt"></i>
+        <h3>Garantia Real</h3>
+        <p>Assumimos o nosso trabalho. Se houver falha técnica na instalação, nós corrigimos. É uma questão de honra.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTATO ================= -->
+<section id="contato">
+  <div class="container">
+    <h2>Fale Conosco</h2>
+    <p>Solicite um orçamento sem compromisso direto no WhatsApp.</p>
+    <br>
+
+    <div class="whatsapp-form">
+      <input type="text" id="whats-name" placeholder="Seu nome">
+      <textarea id="whats-message" placeholder="Descreva o serviço desejado"></textarea>
+
+      <button class="btn btn-whatsapp" onclick="sendToWhatsApp()">
+        <i class="fab fa-whatsapp"></i> Enviar mensagem
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <p>&copy; 2026 Robson Calhas e Rufos. Todos os direitos reservados.</p>
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+const header = document.getElementById('main-header');
+const navLinks = document.querySelectorAll('.nav-link');
+
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 50);
+
+  let current = '';
+  document.querySelectorAll('section[id]').forEach(section => {
+    if (pageYOffset >= section.offsetTop - 200) {
+      current = section.id;
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.toggle(
+      'active',
+      link.getAttribute('href').substring(1) === current
+    );
+  });
+});
+
+function sendToWhatsApp() {
+  const nome = document.getElementById('whats-name').value;
+  const mensagem = document.getElementById('whats-message').value;
+
+  if (!nome || !mensagem) {
+    alert('Preencha todos os campos.');
+    return;
+  }
+
+  const texto = encodeURIComponent(`Olá, meu nome é ${nome}. ${mensagem}`);
+  window.open(`https://wa.me/5534997727351?text=${texto}`, '_blank');
+}
+</script>
+
+</body>
+</html>
